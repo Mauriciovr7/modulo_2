@@ -2,7 +2,10 @@
 // eje 1
 const edad = parseInt(prompt('cuál es tu edad'))
 const edad_dias = edad * 365
-console.log('tiene \n ' + `` + edad_dias + ' dias')
+const bis = Math.round(edad / 4)
+
+console.log('tiene \n ' + `` + (edad_dias+bis) + ' dias')
+
 
 // eje 2
 const edad_max = 83 // media
