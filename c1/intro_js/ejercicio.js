@@ -18,3 +18,4 @@ const texto = prompt('ingrese un texto breve')
 caracteres = texto.length
 
 console.log('ingresó ' + caracteres + ' caracteres')
+
