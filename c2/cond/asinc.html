@@ -43,8 +43,10 @@
     // Extra Bonus:
     if ((genero == 'hombre' && edad >= jubi_hombre) || (genero == 'mujer' && edad >= jubi_mujer)) {
       console.log('ya puede jubilar')
-    } else {
+    } else if ((genero == 'hombre' || genero == 'mujer')) {
       console.log('aún  no puede jubilar')
+    } else {
+      alert('opcion no válida presione tecla f5')
     }
 
 
