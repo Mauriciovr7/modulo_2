@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>condicional</title>
+</head>
+
+<body>
+  <h1>Hola</h1>
+  <script>
+
+    //asinc
+
+    //Par o impar
+    const edad = parseInt(prompt('ingrese edad'))
+    if (edad % 2 == 0) {
+      console.log('edad par')
+    } else {
+      console.log('edad impar')
+    }
+
+    const genero = prompt('ingrese si es hombre o mujer')
+    const jubi_hombre = 65
+    const jubi_mujer = 60
+    /*
+    if (genero == 'hombre') {
+      if (edad >= jubi_hombre) {
+        console.log('ya puede jubilar')
+      } else {
+        console.log('aún  no puede jubilar')
+      }
+    } else if (genero == 'mujer') {
+      if (edad >= jubi_mujer) {
+        console.log('ya puede jubilar')
+      } else {
+        console.log('aún  no puede jubilar')
+      }
+    }
+    */
+
+    // Extra Bonus:
+    if ((genero == 'hombre' && edad >= jubi_hombre) || (genero == 'mujer' && edad >= jubi_mujer)) {
+      console.log('ya puede jubilar')
+    } else {
+      console.log('aún  no puede jubilar')
+    }
+
+
+  </script>
+
+
+
+  <!-- <script src="./condicionales.js"></script> -->
+
+</body>
+
+</html>

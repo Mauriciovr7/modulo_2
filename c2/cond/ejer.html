@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>condicional</title>
+</head>
+
+<body>
+    <h1>Hola</h1>
+    <script>
+        /*
+        let edad = prompt('indique edad')
+        edad = parseInt(edad)
+        const bb = 81 == (3 ** 4)
+
+        if (edad < 18) {
+            alert("No puede pasar al bar.");
+        } else if (edad < 21) {
+            alert("Puede pasar al bar, pero no puede tomar alcohol.");
+        } else {
+            alert("Puede pasar al bar y tomar alcohol.");
+        }
+        alert('fin')
+        */
+        /*
+        ejemplo
+        condicionales
+        || = ó
+        && = y
+        != = diferente
+        */
+
+
+
+        let x = 10;
+        let y = "a";
+        y === "b" || x >= 10; // true
+
+        x = 3;
+        y = 8;
+        !(x == "3" || x === y) && !(y !== 8 && x <= y);
+        console.log(!(x == "3" || x === y) && !(y !== 8 && x <= y))
+        // !(v || f) && !(f && v)
+        // !(v) && !(f)
+        // f && v
+        // f
+
+        let str = "";
+        let msj = "jaja!";
+        let esGracioso = "false";
+        !((str || msj) && esGracioso);
+        // !(v || f) && v
+        // !(v) && v
+        // f && v
+        // f
+
+        // 1. Que compare 2 Strings y retorne un valor true.
+        msj || str
+        // 2. Que compare 2 Strings y devuelva false.
+        msj && str
+        // 3. Que involucre un String y un Número y retorne false.
+        x === msj
+        // 4. Que involucre un String y un Número y retorne true.
+        const n = '3'
+        x == n
+
+
+        // let tragos = prompt('ingrese tragos')
+        // tragos = parseInt(tragos)
+        /*
+        let puede_manejar
+        if (tragos > 0) {
+            puede_manejar = false
+        } else {
+            puede_manejar = true
+        }
+        */
+
+        //const puede_manejar = tragos > 0 ? false : true // operador ternario
+
+        // const precaucion = tragos < 0 ? 'no deberia manejar' : 'buen viaje'
+        //const precaucion = tragos < 0 ? alert('no deberia manejar') : alert('buen viaje')
+
+        // if (puede_manejar == false) {
+        //     if (!puede_manejar) {
+        //     alert('no puede manejar')
+        // }
+
+
+    </script>
+
+
+
+    <!-- <script src="./condicionales.js"></script> -->
+
+</body>
+
+</html>
