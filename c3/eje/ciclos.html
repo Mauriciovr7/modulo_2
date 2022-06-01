@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ciclos</title>
+</head>
+
+<body>
+  <h1>Ciclos</h1>
+  <script>
+    let i = 1
+    // mientras
+    /*
+    while (i <= 100) {
+      console.log('contando: ' + i) // del 1 al 100
+      i++
+    }
+    */
+
+    i = 0
+    while (i <= 1000) {
+      console.log('contando: ' + i) // del 0 al 986
+      i += 17
+    }
+
+    i = 0
+    while (i >= -10000) {
+      console.log('contando: ' + i) // del 0 al -9867
+      i -= 143
+    }
+
+    i = 0
+    while (i <= 10000) {
+      console.log('contando: ' + i) // del 0 al 9900
+      i += 150
+    }
+
+    i = 10030
+    console.log('nuevo')
+    while (i <= 10060) {
+      console.log('contando: ' + i) // del 10030 al 10060
+      i++
+    }
+
+    // Ejercicio en clase 01
+
+    let min = 5
+    let minut = 0
+    let seg = 60
+    let secun = 0
+    let m = 'minutos'
+    let s = 'segundos'
+
+    while (minut <= min) {
+      while (secun < seg) {
+        if (minut == 1) {m = 'minuto'}
+        if (secun == 1) {s = 'segundo'}
+        console.log(minut + ' ' + m + ', ' + secun + ' ' + s)
+        secun++
+        s = 'segundos'
+      }
+      secun = 0
+      minut++
+      m = 'minutos'
+    }
+
+    //  Ejercicio en clase 02
+
+    let num = 1;
+    while (num <= 10) {
+      console.log(num); // del 1 al 9
+      num += 2;
+    }
+
+    num = 1;
+    console.log('nuevo')
+    while (num <= 20) {
+      console.log('%4 ',num % 4)
+      if (!(num % 4)) {
+        console.log(num); // 4 8 12 16 20 [deberían ser 1 2 3 ( no divisibles por 4)]
+      }
+      num++;
+    }
+
+    /*
+    num = 100;
+    console.log('nuevo')
+    while (num < 150) {
+      console.log(num + 1); // 101 100 99 loop infinito 
+      num--;
+    }
+    */
+
+    // Ejercicio en clase 03
+    
+    /*
+    Mi primer “Bot”. En este ejercicio deberás crear un bot para una cafetería que
+    reciba hasta 20 clientes y les asigne una mesa, a cada uno de ellos.
+    El mensaje que deberá mostrar a cada uno es: "¡Bienvenid@ a mi café! Su
+    mesa es la X".
+    */
+    let mesa = 1
+    let cliente = 0 // Extra Credit
+    while (mesa <= 20) { // hay 20 mesas
+      console.log('clientes:' + cliente)
+      alert('¡Bienvenid@ a mi café! Su mesa es la ' + mesa)
+      cliente++
+      mesa++
+      
+    }
+    console.log('Total clientes: '+ cliente)
+
+    /*
+    Extra Credit
+    Optimizá el código creando una Variable que almacene el número de clientes.
+
+    */
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
