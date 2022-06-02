@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios</title>
+</head>
+
+<body>
+  <script>
+
+    console.log('eje')
+    let i = 100
+    while (i <= 300) {
+      if (i % 7 == 0) { // multiplo de 7
+        console.log('gatito' + i)
+      } else {
+        console.log('cuye')
+      }
+
+      i++
+    }
+
+    function promedio(nota1, nota2, nota3) {
+      const suma = nota1 + nota2 + nota3
+      const prom = suma / 3
+      return prom
+    }
+    // promedio(5,7,6) // 6
+
+    function circulo(radio) {
+      console.log('si el radio es: ' + radio + ' , el perimetro será ' + (2 * Math.PI * radio) + ' y el área será ' + (Math.PI * radio * radio))
+    }
+
+    circulo(3)
+    circulo(7)
+    circulo(9)
+
+
+
+
+    // Ejercicio en clase 01
+
+    function test1(x, y) {
+      return y - x;
+    }
+    test1(10, 40); // 30
+    //-----------------------
+    function test2(x, y) {
+      return x * 2;
+      console.log(x);
+      return x / 2;
+    }
+    test2(10); // 20                           
+
+    // Ejercicio en clase 02
+
+    /*
+    Matemática simple. En este ejercicio deberás crear:
+1. Una función que se llame triplicador que tome un número como input (osea,
+como Parámetro) y retorne el triple de ese valor.
+
+2. Una función multiplicador que tome dos números como Parámetros y
+devuelva el producto de los dos.
+
+3. Una función división que tome dos números como Parámetros y devuelva el
+resultado de dividir el primero por el segundo.
+
+4. Una función resto que tome dos números como Parámetros y devuelva el
+resultado del módulo del primero sobre el segundo.
+
+Por último, calcula el valor de triplicar 5, luego multiplicar eso por 12, dividir por 12
+y encontrar el resto de dividir eso en 3.
+Importante: Use solamente las funciones que escribiste antes, sin otros operadores
+    */
+
+    function triplicador(n) {
+      return n * 3;
+    }
+    triplicador(10); // 30
+
+    function multiplicador(a, b) {
+      return a * b;
+    }
+    multiplicador(10, 3); // 30
+
+    function division(a, b) {
+      return a / b;
+    }
+    division(10, 2); // 5
+
+    function resto(a, b) {
+      return a % b;
+    }
+    (resto(10, 3)); // 1
+
+    resto(division(multiplicador(triplicador(5), 12), 12), 3) // 0
+
+
+  </script>
+</body>
+
+</html>

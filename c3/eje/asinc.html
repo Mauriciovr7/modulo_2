@@ -37,20 +37,44 @@
       if (opcion == 2 && pc == 1 || opcion == 1 && pc == 0 || opcion == 0 && pc == 2) {
         us++
         console.log('ud gana')
+        alert('ud gana')
       } else if (pc == 2 && opcion == 1 || pc == 1 && opcion == 0 || pc == 0 && opcion == 2) {
         com++
         console.log('pc gana')
+        alert('pc gana')
       } else {
         console.log('empate')
+        alert('empate')
       }
       console.log(pc)
       opcion = prompt(' le gustaría volver a jugar? si o no ')
       if (opcion == 'no') {
-        console.log('puntaje pc: ' + com+ ' puntaje us: ' + us)
-        console.log('gracias por jugar')
-        break
+        console.log('puntaje pc: ' + com + ' \npuntaje us: ' + us + '\ngracias por jugar')
+        alert('gracias por jugar\n' + 'puntaje pc: ' + com + ' \npuntaje us: ' + us)
+        break // romper ciclo while
       }
     }
+
+    // - Ejercicio extra
+    /*
+    Usa diagramaspara predecir la salida de los siguientes fragmentos:
+*/
+for (var a = 0; a < 8; a++) {
+    console.log(a);
+}
+//---------------------------------
+for (var b = 10; b < 100; b += 10) {
+    console.log(b);
+}
+//--------------------------------------------
+for (var c = 16; c > 0; c--) {
+    console.log(c);
+}
+//-----------------------------------------------
+for (var d = 0; d < 100; d++) {
+    console.log(d);
+    d += 5;
+}
   </script>
 </body>
 </html>

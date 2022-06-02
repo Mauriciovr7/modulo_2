@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extra</title>
+</head>
+
+<body>
+  <script>
+    //Prepara un archivo de texto que  incluya tu predicción para cada problema y lo que imprimirá en CONSOLA.
+
+    function a() {
+      return 35;
+    }
+    console.log(a()) // 35
+
+    //////////////////////
+    function a() {
+      return 4;
+    }
+    console.log(a() + a()); // 8
+
+    //////////////////////
+    function a(b) {
+      return b;
+    }
+    console.log(a(2) + a(4)); // 6 suma 2 y 4
+
+    //////////////////////
+    function a(b) {
+      console.log(b);
+      return b * 3;
+    }
+    console.log(a(3)); // 3 9
+
+    //////////////////////
+    function a(b) {
+      return b * 4;
+      console.log(b); // fuera
+    }
+    console.log(a(10)); // 40
+
+    //////////////////////
+    function a(b) {
+      if (b < 10) {
+        return 2;
+      }
+      else {
+        return 4;
+      }
+      console.log(b); // fuera
+    }
+    console.log(a(15)); // 4
+
+    //////////////////////
+    function a(b, c) {
+      return b * c;
+    }
+    console.log(10, 3); // 10, 3
+    console.log(a(3, 10)); // 30
+
+    //////////////////////
+    function a(b) {
+      for (var i = 0; i < 10; i++) {
+        console.log(i);
+      }
+      return i;
+    }
+    console.log(3); // 3
+    console.log(4); // 4
+
+    //////////////////////
+    function a() {
+      for (var i = 0; i < 10; i++) {
+        i = i + 2; // +2
+        console.log(i);
+      } // +1
+    }
+    a(); // 2 5 8 11
+
+    //////////////////////
+    function a(b, c) {
+      for (var i = b; i < c; i++) {
+        console.log(i);
+      }
+      return b * c; //
+    }
+    a(0, 10); // 0 1 ..9 0
+    console.log(a(0, 10)); // 0 1 ..9 0
+
+    //////////////////////
+    function a() {
+      for (var i = 0; i < 10; i++) {
+        for (var j = 0; j < 10; j++) {
+          console.log(j);
+        }
+        console.log(i);
+      }
+    } // nada no invocada
+
+    //////////////////////
+    function a() {
+      for (var i = 0; i < 10; i++) {
+        for (var j = 0; j < 10; j++) {
+          console.log(i, j);
+        }
+        console.log(j, i);
+      }
+    } // nada no invocada
+
+    //////////////////////
+    var z = 10;
+    function a() {
+      var z = 15;
+      console.log(z);
+    }
+    console.log(z); // 10
+
+    //////////////////////
+    var z = 10;
+    function a() {
+      var z = 15;
+      console.log(z);
+    }
+    a(); // 15
+    console.log(z); // 10
+
+    //////////////////////
+    var z = 10;
+    function a() {
+      var z = 15;
+      console.log(z);
+      return z;
+    }
+    z = a(); // 15 15
+    console.log(z); // 15
+  </script>
+</body>
+
+</html>
