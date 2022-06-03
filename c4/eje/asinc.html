@@ -39,7 +39,7 @@ comas.
     let desde = 1
     let fizzBuzz2 = ''
 
-    function fizzBuzz(desde, hasta) {
+    function fizzBuzz(desde, hasta, fizz_num, buzz_num, palabra1, palabra2) {
       while (desde <= hasta) {
         if (!(desde % fizz_num) && !(desde % buzz_num)) { // multiplos de fizz_num y buzz_num (fizzBuzz2)
           console.log(palabra1 + ' ' + palabra2 + ' ')
@@ -68,7 +68,7 @@ comas.
     const palabra1 = prompt('Elegí una palabra para que reemplace a Fizz')
     const palabra2 = prompt('Elegí una palabra para que reemplace a Buzz')
 
-    fizzBuzz(desde, hasta) // invocador
+    fizzBuzz(desde, hasta, fizz_num, buzz_num, palabra1, palabra2) // invocador
 
   </script>
 </body>
