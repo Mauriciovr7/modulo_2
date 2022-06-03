@@ -30,7 +30,7 @@ modifique e invierta el orden de sus elementos.
     */
   //let Arreglo = [1,2,3,4,5]
     function printReverse(Arreglo) {
-      for (i=Arreglo.length-1;i>=0;i--) { // largo -1
+      for (let i=Arreglo.length-1;i>=0;i--) { // largo -1
         console.log(Arreglo[i]) // imprime
       }
     }
@@ -38,7 +38,7 @@ modifique e invierta el orden de sus elementos.
     new_Arreglo = []
 
     function reverser(Arreglo) { 
-      for (i=(Arreglo.length - 1);i>=0;i--) {
+      for (let i=(Arreglo.length - 1);i>=0;i--) {
         new_Arreglo +=  Arreglo[i] + ' , '        
       }
       // console.log(Arreglo)
