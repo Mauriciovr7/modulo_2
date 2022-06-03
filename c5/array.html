@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>array</title>
+</head>
+
+<body>
+  <h2>array</h2>
+  <script>
+    // Ejercicio en clase 01 *************************************
+
+    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let colores = ["Rojo", "Azul", "Verde", "Amarillo"];
+    numbers.forEach(function (color) {
+      if (color % 3 === 0) { // divididos por 3 dan 0
+        console.log(color); // 0 3 6 9
+      }
+    });
+
+    // Ejercicio en clase 02
+
+    /* usar slice o no
+    En este ejercicio deberás crear una Función que devuelva un Arreglo con sus
+elementos invertidos, sin modificarlo. Luego, deberás hacer una Función que lo
+modifique e invierta el orden de sus elementos.
+    */
+  //let Arreglo = [1,2,3,4,5]
+    function printReverse(Arreglo) {
+      for (i=Arreglo.length-1;i>=0;i--) { // largo -1
+        console.log(Arreglo[i]) // imprime
+      }
+    }
+
+    new_Arreglo = []
+
+    function reverser(Arreglo) { 
+      for (i=(Arreglo.length - 1);i>=0;i--) {
+        new_Arreglo +=  Arreglo[i] + ' , '        
+      }
+      // console.log(Arreglo)
+      return new_Arreglo// retornar array invertido
+    }
+
+    // testeador
+    printReverse(["a", "b", "c"]) // invocar función con array
+    // c
+    // b
+    // a
+    printReverse([1, 2, 3, 4])
+    // 4
+    // 3
+    // 2
+    // 1
+
+    //reverser(["a", "b", "c"]) // ["c","b", "a"]
+    //reverser([1, 2, 3, 4]) // [4, 3, 2, 1]
+
+
+  </script>
+</body>
+
+</html>
