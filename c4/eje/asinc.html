@@ -36,8 +36,13 @@ dos hasta llegar a diez
 comas.
     */
 
-    let desde = 1
     let fizzBuzz2 = ''
+    let desde = 1
+    let hasta = 100
+    let fizz_num = 3
+    let buzz_num = 5
+    let palabra1 = 'fizz'
+    let palabra2 = 'buzz'
 
     function fizzBuzz(desde, hasta, fizz_num, buzz_num, palabra1, palabra2) {
       while (desde <= hasta) {
@@ -60,15 +65,15 @@ comas.
       // 6 , 12 , 18 , 24 , 30 , 36 , 42 , 48 , 54 , 60 , 66 , 72 , 78 , 84 , 90 , 96 ,
     }
     //2. Mejorar la Función para que el usuario pueda decidir hasta qué número tiene que contar fizzBuzz2.
-    const hasta = parseInt(prompt('hasta qué número tiene que contar fizzBuzz2  ( ej: 100 )')) // 100
+    hasta = parseInt(prompt('hasta qué número tiene que contar fizzBuzz2  ( ej: 100 )')) // 100
 
     //3. Mejorar la Función para que el usuario pueda ingresar fizz_num y buzz_num para que la sustitución de palabras ocurra en los números múltiplos de los nuevos argumentos de entrada (en vez de solo 3 y 5).
-    const fizz_num = parseInt(prompt('ingrese numero, para usar de primer multiplo')) // 3
-    const buzz_num = parseInt(prompt('ingrese numero, para usar de segundo multiplo')) // 6
+    fizz_num = parseInt(prompt('ingrese numero, para usar de primer multiplo')) // 3
+    buzz_num = parseInt(prompt('ingrese numero, para usar de segundo multiplo')) // 6
 
     // Elegí una palabra para cada String (palabra1 y palabra2) que reemplace a Fizz y a Buzz.
-    const palabra1 = prompt('Elegí una palabra para que reemplace a Fizz')
-    const palabra2 = prompt('Elegí una palabra para que reemplace a Buzz')
+    palabra1 = prompt('Elegí una palabra para que reemplace a Fizz')
+    palabra2 = prompt('Elegí una palabra para que reemplace a Buzz')
 
     fizzBuzz(desde, hasta, fizz_num, buzz_num, palabra1, palabra2) // invocador
 
