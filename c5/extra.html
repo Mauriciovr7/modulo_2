@@ -11,6 +11,10 @@
 <body>
   <script>
 
+    //////////////
+    // Basicos //
+    ////////////
+
     // función que devuelve un array con todos los números del 1 al 255.
     function todos() {
       let array = []
@@ -41,29 +45,31 @@
     // función que devuelva la suma de todos los valores dentro de un array
     function valores(array) {
       let suma = 0
-      for (let i = 0; i <= array.length - 1; i++) { // No olvidar let ***************
-        suma += array[i]
-      }
+      array.forEach(function (item) {
+        suma += item
+      })
+
       return suma
     }
 
     // función que devuelva el número mayor de un array
     function max(lista) {
       let mayor = lista[0]
-      for (let i = 0; i < lista.length; i++) { // < lista.length
-        if (lista[i] > mayor) {
-          mayor = lista[i]
+      lista.forEach(function (item) {
+        if (item > mayor) {
+          mayor = item
         }
-      }
+      })
+
       return mayor
     }
 
     // función que devuelva el promedio de los valores de un array
     function promedio(array) {
       let suma = 0
-      for (let i = 0; i <= array.length - 1; i++) { // <= array.length - 1
-        suma += array[i]
-      }
+      array.forEach(function (item) {
+        suma += item
+      })
       return suma / array.length
     }
 
@@ -79,16 +85,16 @@
     // Dado un valor Y, escribe una función que toma un array y devuelve los valores mayores que Y. Por ejemplo, si arr = [1,3,5,7] y Y = 3, tu función devolverá 2 (hay 2 números en el array mayores que 3, esto son 5 y 7). 
     function mayor_y(y, lista) {
       let mayor = []
-      for (let i = 0; i < lista.length; i++) {
-        if (lista[i] > y) {
-          mayor.push(lista[i])
+      lista.forEach(function (item) {
+        if (item > y) {
+          mayor.push(item)
         }
-      }
+      })
       return mayor
     }
+    // mayor_y(3,[1,3,5,7]) // en consola
 
     // función que reemplace cada valor por el cuadrado del mismo valor
-
     function cuadrado(array) {
       for (let i = 0; i <= array.length - 1; i++) {
         array[i] = array[i] ** 2
@@ -143,6 +149,63 @@
       }
       return array
     }
+
+    //////////////////
+    // Intermedios //
+    ////////////////
+
+    /*
+    1.	Sigma - Implementa una función sigma(num) que, dado un número, 
+    devuelve la suma de todos los enteros positivos (incluyendo el número dado). 
+    Ej: sigma(3) = 6 (1+2+3); sigma(5) = 15 (1+2+3+4+5).
+    */
+    function sigma(num) {
+      let suma = 0
+      for (let i = 1; i <= num; i++) {
+        suma += i
+      }
+      return suma
+    }
+
+    /*
+    2.	Factorial - Escribe una función factorial(num) que, dado un número, 
+    devuelva el producto (multiplicación) de todos los enteros positivos (incluyendo el número dado).
+    Por ejemplo: factorial(3) = 6 (1*2*3); factorial(5) = 120 (1*2*3*4*5).
+    */
+
+    /*
+    3.	Fibonacci - Crea una función para generar números de Fibonacci. En esta famosa 
+    secuencia matemática, cada número es la suma de las dos anteriores, partiendo con los 
+    valores 0 y 1. Tu función debería aceptar un argumento, un índice en la secuencia 
+    (donde 0 corresponde al valor inicial, 4 corresponden al valor cuatro más tarde, etc). 
+    Ejemplos: 
+    fibonacci(0) = 0 (dado), fibonacci(1) = 1 (dado), fibonacci(2) = 1 (fib(0)+fib(1), o 0+1), 
+    fibonacci(3) = 2 (fib(1) + fib(2)3, o 1+1), fibonacci(4) = 3 (1+2), fibonacci(5) = 5 (2+3), 
+    fibonacci(6) = 8 (3+5), fibonacci(7) = 13 (5+8). Haz esto primero sin usar recursión. 
+    Si no sabes qué es una recursión, no te preocupes puesto que vamos a introducir este concepto 
+    en la Parte 2 de esta actividad. 
+    /*
+    4.	Array: Penúltimo: Devuelve el penúltimo elemento del array. Dado [42,true,4,”Liam”, 7] 
+    devuelve “Liam”. Si el array es muy pequeño, devuelve null.  
+    */
+
+    /*
+    5.	Array: “N” último: Devuelve el elemento “N” último. Dado ([5,2,3,6,4,9,7],3], devuelve 6. 
+    Si el array es muy pequeño, devuelve null. 
+    */
+
+    /*
+    6.	Array: Segundo más grande: Devuelve el segundo elemento más grande de un array. 
+    Dado [42,1,4,3.14,7], devuelve 7.  Si el array es muy pequeño, devuelve null.
+    */
+
+    /*
+    7.	Doble Problema Par: Crea una función que cambie un array dado duplicando 
+    cada uno de sus elementos y manteniendo el orden original. 
+    Convierte [4, "Ulysses", 42, false]   a    [4,4, "Ulysses", "Ulysses", 42, 42, false, false].
+    */
+
+
   </script>
 </body>
 
