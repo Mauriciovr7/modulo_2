@@ -1,27 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>extra</title>
 </head>
+
 <body>
   <script>
-    function max(lista) {
-      // [6,3,67,12,-5]
-      let mayor = lista[0]
-      for (let i = 0;num <= 255;num++) {
-        array = num
+
+    // función que devuelve un array con todos los números del 1 al 255.
+    function todos() {
+      let array = []
+      for (let num = 1; num <= 255; num++) {
+        array.push(num)
       }
-      return
+      return array
     }
-    // function todos() {
-    //   for (num = 1;num <= 255;num++) {
-    //     array = num
-    //   }
-    //   return
-    // }
+
+    // función que entregue la suma de todos los números pares del 1 al 1000 
+    function pares() {
+      let suma = 0
+      for (let num = 1; num <= 1000; num++) {
+        suma = !(num%2) ? (suma + num) : suma
+      }
+      return suma
+    }
+
+    // función que devuelva la suma de todos los números impares entre 1 y 5000
+    function impares() {
+      let suma = 0
+      for (let num = 1; num <= 5000; num++) {
+        suma = (num%2) ? (suma + num) : suma
+      }
+      return suma
+    }
+
+    // función que devuelva la suma de todos los valores dentro de un array
+    function valores(array) {
+      let suma = 0
+      for (let i = 0; i <= array.length - 1; i++) { // No olvidar let ***************
+        suma += array[i]
+      }
+      return suma
+    }
+
+    // función que devuelva el número mayor de un array
+    function max(lista) {
+      let mayor = lista[0]
+      for (let i = 0;i < lista.length;i++) {
+        if (lista[i] > mayor) {
+          mayor = lista[i]
+        }
+      }
+      return mayor
+    }
+
+    // función que devuelva el promedio de los valores de un array
+    function promedio(array) {
+      let suma = 0
+      for (let i = 0; i <= array.length - 1; i++) {
+        suma += array[i]        
+      }
+      return suma / array.length
+    }
   </script>
 </body>
+
 </html>
