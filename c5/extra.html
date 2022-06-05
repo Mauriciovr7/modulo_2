@@ -251,13 +251,12 @@
     function doble(array) {
       let dArray = []
       for (let i = 0; i <= array.length - 1; i++) {
-        dArray.push(array[i])
-        dArray.push(array[i])
+        for (let j = 1; j <= 2; j++) {
+          dArray.push(array[i])
+        }
       }
       return dArray
     }
-
-
   </script>
 </body>
 
