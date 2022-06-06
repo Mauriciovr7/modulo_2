@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objeto</title>
+</head>
+<body>
+  <script>
+    let auto = {
+      marck: 'volksw',
+      model: 'gol',
+      year: '2000',
+      start: function() {
+        console.log('el auto arrancó')
+      }
+    }
+    // auto.color = 'plata'
+
+    let alum = [
+      {nombre: 'juan', apellido: 'jara'},
+      {nombre: 'maria', apellido: 'paez'},
+      {nombre: 'jose', apellido: 'tapia'}
+    ]
+
+    let coloresMuebles = 
+      {cama: 'blanca', ropero: 'marron', escritorio: 'beige'}
+
+    for (let mueble in coloresMuebles) {
+      console.log(mueble)
+    }
+  </script>
+</body>
+</html>

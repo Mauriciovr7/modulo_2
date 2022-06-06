@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>asincrono</title>
+</head>
+
+<body>
+  <script>
+    // Ejercicio asincrónico 02
+    let ver = ''
+    let pelis = [
+      { titulo: '"Búsqueda implacable"', raiting: 5, loHasVisto: true },
+      { titulo: '"Norbit"', raiting: 3, loHasVisto: false },
+      { titulo: '"Mini espías"', raiting: 2, loHasVisto: true },
+      { titulo: '"La vida es Bella"', raiting: 5, loHasVisto: false },
+      { titulo: '"Jurasic"', raiting: 5, loHasVisto: true },
+      { titulo: '"Ben10"', raiting: 2, loHasVisto: false },
+      { titulo: '"Jesus"', raiting: 7, loHasVisto: true }
+    ]
+    // for (let i in pelis) {
+    //   pelis[i].loHasVisto ? ver = 'Viste ' : ver = 'No viste '
+    //   console.log(ver + pelis[i].titulo + ' - ' + pelis[i].raiting + ' estrellas')
+    // }
+
+    for (let i of pelis) {
+      i.loHasVisto ? ver = 'Viste ' : ver = 'No viste '
+      console.log(ver + i.titulo + ' - ' + i.raiting + ' estrellas')
+    }
+
+    // Ejercicio asincrónico 03
+    /*
+    Debés crear una función llamada `arregloDeObjetos` que reciba un número y una
+palabra como parámetro y devuelva un arreglo de objetos que tenga: una
+propiedad llamada como la palabra pasada por parámetro y el valor del número y
+sus anteriores.
+    */
+    function arregloDeObjetos(num, palabra) {
+      const objeto = {}
+      const array = []
+      const propertyKey = palabra
+      for (let i = 0;i < num;i++) {        
+        objeto[propertyKey] = i+1
+        array[i] = {[propertyKey]: i+1}
+      }
+      return array
+    }
+
+    /*
+    Ejemplo:
+arregloDeObjetos(5, “hola”) debe retornar [{hola: 1}, {hola: 2}, {hola: 3}, {hola: 4}, {hola: 5 }]
+arregloDeObjetos(3, “chau”) debe retornar [{chau: 1}, {chau: 2}, {chau: 3}]
+    */
+
+  </script>
+</body>
+
+</html>

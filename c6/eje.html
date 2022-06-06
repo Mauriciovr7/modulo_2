@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // - Ejercicio en clase 01
+
+   // 1. Creá una Variable llamada miAuto y asignale un Objeto vacío.
+  const miAuto = {}
+
+    // 2. Asignale a miAuto una Propiedad marca, que a su vez contenga un String.
+    miAuto.marck = 'volvo'
+
+    // 3. Agregá una Propiedad año que contenga un número entero
+    miAuto.year = 2021
+
+    // 4. Agregá una Propiedad nuevo que contenga un booleano.
+    miAuto.new = true
+
+    // const miAuto = {
+    //   marck: 'volvo',
+    //   year: 2021,
+    //   new: true
+    // }
+
+    // 5. Creá una Variable llamada propertyKey y asignale el String "modelo"
+    // 6. Agregá la Propiedad modelo al Objeto miAuto.
+/*
+    7. Creá una Variable llamada anotherPropertyKey y dale el Valor "precio".
+8. Cuantificá el Valor de tu auto.
+9. Asigná la String "color" a una Variable nueva llamada nextProperty.
+10.Usá la variable nextProperty para añadir el color a tu auto.
+11.Usá el loop for...in para iterar sobre el Objeto miAuto y que muestre en
+la consola el key y el value de cada Propiedad.
+*/
+    const propertyKey = 'model' // xc60
+    //miAuto.model = 'xc60'
+    miAuto[propertyKey] = 'xc60'
+
+    const anotherPropertyKey = 'price' // us$ 1 million
+    miAuto[anotherPropertyKey] = 1000000
+
+    const nextProperty = 'color' // platinium
+    miAuto[nextProperty] = 'platinium'
+
+    for (let propiedad in miAuto) {
+        console.log(propiedad)
+    }
+
+    for (let propiedad in miAuto) {
+        console.log('el valor de ' + propiedad + ' es ' + miAuto.propiedad) // undefined
+    }
+
+    for (let propiedad in miAuto) {
+        console.log('el valor de ' + propiedad + ' es ' + miAuto[propiedad]) // string
+    }
+
+
+
+  </script>
+</body>
+</html>
