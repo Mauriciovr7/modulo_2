@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>extra</title>
 </head>
+
 <body>
   <script>
     /*
@@ -14,7 +16,7 @@
 derecha de n! (factorial)
 */
 
-  function factorial(n) {
+    function factorial(n) {
       let por = 1
       let texto = ''
       let array = []
@@ -24,21 +26,73 @@ derecha de n! (factorial)
       }
       texto = por.toString()
       array = texto.split("")
-      array.forEach(function(item) {
+      array.forEach(function (item) {
         if (item == '0') {
           ceros++
         }
       })
       return ceros
     }
-  /*
-2.­ Escriba una función/método que dado un número entero, entregue su
-representación en palabras, Ej. 145 ­> “ciento cuarenta y cinco”
+    /*
+  2.­ Escriba una función/método que dado un número entero, entregue su
+  representación en palabras, Ej. 145 ­> “ciento cuarenta y cinco”
+  */
+    function n2str(n) {
+      let texto = ''
+      let array = []
+      let cifra = []
+
+      texto = n.toString()
+      array = texto.split("")
+
+      array.forEach(function (item) {
+        switch (item) {
+          case '0':
+            cifra.push('cero')
+            break
+          case '1':
+            cifra.push('uno')
+            break
+          case '2':
+            cifra.push('dos')
+            break
+          case '3':
+            cifra.push('tres')
+            break
+          case '4':
+            cifra.push('cuatro')
+            break
+          case '5':
+            cifra.push('cinco')
+            break
+          case '6':
+            cifra.push('seis')
+            break
+          case '7':
+            cifra.push('siete')
+            break
+          case '8':
+            cifra.push('ocho')
+            break
+          case '9':
+            cifra.push('nueve')
+            break
+        }
+      })
+      return cifra
+    }
+    /*
 3.­ Considere un tablero de ajedrez de NxN, realice un algoritmo que
 visite cada espacio del tablero, usando solamente los movimientos de un
 caballo. (Puntos extras si se visita cada espacio una sola vez)
     */
+  function tablero(x,y) {
+    let horseA = (2,1)
+    let horseB = (1,2)
+
+  }
 
   </script>
 </body>
+
 </html>
