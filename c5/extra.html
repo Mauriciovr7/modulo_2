@@ -172,13 +172,20 @@
     devuelva el producto (multiplicación) de todos los enteros positivos (incluyendo el número dado).
     Por ejemplo: factorial(3) = 6 (1*2*3); factorial(5) = 120 (1*2*3*4*5).
     */
-    function factorial(num) {
+    function factorial(num) { // probabilidades
       let por = 1
       for (let i = 1; i <= num; i++) {
         por *= i
       }
       return por
+      // con recursividad
+      // if (num <= 1) {
+      //   return 1
+      // }
+      // return num * factorial(num-1) // 5 4 3 2 // llama la funcion hasta  factorial de 1
     }
+    // const factorial = num => num <= 1 ? 1 : num * factorial(num-1)
+    
 
     /*
     3.	Fibonacci - Crea una función para generar números de Fibonacci. En esta famosa 

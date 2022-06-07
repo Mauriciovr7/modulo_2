@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+
+<body>
+  <h1 id="primary">Titulo</h1>
+  <p>Hola Mundo</p>
+  <h2>Me va a modificar?</h2>
+
+  <a href="http://www.google.com" id="btnGoogle">Ir a Google</a>
+  <a href="http://www.google.com">Ir a Google</a>
+  <a href="http://www.google.com">Ir a Google</a>
+
+
+  <script>
+    let parrafo = document.querySelector("p")
+    parrafo.style.color = "red"
+
+    document.body
+    document.querySelector("p")
+    document.querySelector("#primary")
+    document.querySelector(".important")
+    document.querySelector("p.important")
+    document.querySelector("#nav ol li")
+    document.querySelector("h1, p")
+
+    document.body.style.background = "yellow"
+    document.querySelector("#primary").style.color = "blue"
+    document.querySelector("p").style.fontSize = "large"
+    document.querySelector("h1").style.fontFamily = "Arial"
+
+    document.querySelector("h1").textContent = "Si, te modifiqué"
+
+    let botonGoogle = document.querySelector("#btnGoogle")
+    botonGoogle.getAttribute("href")
+    botonGoogle.setAttribute("href", "http://plataforma5.iicap.cl/")
+
+    const enlace = document.querySelector('a') // el primer a
+    enlace.setAttribute('target', '_blank')
+
+    let todosLosLinks = document.querySelectorAll("a")    
+    for (var i = 0; i < todosLosLinks.length; i++) {
+      todosLosLinks[i].setAttribute("href", "http://plataforma5.iicap.cl/")
+    }
+
+    // let elemento = document.createElement("elemento")
+    let h1 = document.createElement("h1")
+    h1.textContent = "Plataforma 5 Chile"
+    let div = document.createElement("div")
+
+  </script>
+</body>
+
+</html>

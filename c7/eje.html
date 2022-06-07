@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .verde {
+      color: green;
+      background: burlywood;
+    }
+  </style>
+</head>
+<body>
+  <h2>ejemplo DOM</h2>
+  <p id="primero" class="verde"> primer parrafo</p>
+  <p class="segundo" class="verde"> segundo parrafo</p>
+
+  <div id="source">texto a</div>
+  <div id="destination">texto b</div>
+
+  
+
+  <footer></footer>
+
+  <script>
+
+    const etiq_h2 = document.querySelector('h2')
+    etiq_h2.style['text-decoration'] = 'underline' // subrayar
+    etiq_h2.style.margin = '2rem'
+
+    const primero = document.querySelector('#primero')
+    primero.classList.remove('verde')
+
+    const segundo = document.querySelector('.segundo')
+    segundo.classList.add('verde')
+
+    segundo.innerHTML = 'ahora agregamos enlace <a href="http://www.google.com">google</a>'
+    let primer_a = document.querySelector("a")
+    primer_a.setAttribute('target', '_blank')
+
+    document.querySelector('footer').innerHTML = ('<div><p>párrafo y div agregado en footer</p></div>')
+
+    // crear nueva etiqueta
+    const div_footer = document.createElement('div')
+    // dar contenido
+    div_footer.innerHTML = '<p>Todos 2022</p>'
+    // traer etiqueta contenedora
+    const footer = document.querySelector('footer')
+    // agregar tag al contenedor
+    footer.appendChild(div_footer)
+    // eliminar tag
+    // traer tag y guardar en var
+    const year = document.querySelector('#year')
+    // contenedor remueve tag
+    //footer.removeChild('year')
+
+
+
+    // Ejercicio en clase 01
+
+    /*
+    1. En tu HTML creá un <div> con ID source y otro con ID destination (ambos con
+texto dentro).
+2. Seleccioná ambos y guardalos en sus respectivas Variables.
+3. Luego, intercambiá el contenido entre ambos <div> (es decir, que el texto del
+<div> de ID source pase al de ID destination y viceversa).
+
+    */
+    let sourceDiv = document.querySelector("#source")
+    let sw = sourceDiv.textContent
+    let destinationDiv = document.querySelector("#destination")
+    
+    sourceDiv.textContent=destinationDiv.textContent
+    destinationDiv.textContent=sw
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>asincrono</title>
+
+  <style>
+    .square {
+      height: 200px;
+      width: 100px;
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Título</h1>
+  <div>DIV</div>
+  <script>
+    // Ejercicio asincrónico 02
+
+
+    //     1. Creá un archivo HTML que, dentro de su <body> solo tenga un título <h1>.
+    // 2. Por consola, cambiá el texto del título.
+    // ● Para cambiar el texto del título, usá la Propiedad textContent.
+    // 3. Por consola, cambiá el título por un párrafo con un texto a elección.
+
+    // document.querySelector('h1').textContent='otro'
+
+    // ● Para cambiar el título por un párrafo, usá la Propiedad innerHTML.
+
+    //document.querySelector('h1').innerHTML = ('<p>párrafo agregado en h1</p>')
+
+    // 4. Por consola, agregá otro párrafo al <body> con un texto a elección.
+    // ● Para agregar otro párrafo al <body>, usá appendChild.
+
+    // crear nueva etiqueta
+    // const contenedor = document.createElement('div')
+    // dar contenedor
+    // contenedor.innerHTML = '<p>párrafo agregado al body</p>'
+    // traer etiqueta body
+    // const body = document.querySelector('body')
+    // agregar tag al body
+    // body.appendChild(contenedor)
+
+
+
+    //- Ejercicio asincrónico 03
+
+
+    //     1. Creá un documento HTML con un <div> dentro.
+    // 2. Usando la Propiedad style del elemento en JavaScript, dale a ese <div>
+    // altura, ancho y un color de fondo.
+
+    const etiq_div = document.querySelector('div')
+
+    // etiq_div.style['height'] = '200px'
+    // etiq_div.style['width'] = '100px'
+    // etiq_div.style.background = 'yellow'
+
+    // //etiq_div.style.margin = '2rem'
+    // // etiq_div.style.fontSize = "large"
+    // // etiq_div.style['font-size'] = "large"
+
+    
+
+    // 3. Creá la clase .square en tu stylesheet, y dale las mismas Propiedades.
+    // 4. Ahora en vez de agregársela con la Propiedad style, hacelo con la
+    // Propiedad classList.
+    // ¿Qué devuelve div.classList? // etiq_div.classList
+
+    // etiq_div.classList.add('square')
+
+    // DOMTokenList ['square', value: 'square']
+  </script>
+</body>
+
+</html>
