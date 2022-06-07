@@ -65,7 +65,7 @@
     // // etiq_div.style.fontSize = "large"
     // // etiq_div.style['font-size'] = "large"
 
-    
+
 
     // 3. Creá la clase .square en tu stylesheet, y dale las mismas Propiedades.
     // 4. Ahora en vez de agregársela con la Propiedad style, hacelo con la
@@ -74,7 +74,22 @@
 
     // etiq_div.classList.add('square')
 
+    // etiq_div.classList
     // DOMTokenList ['square', value: 'square']
+
+    //     5. Desde tu consola, sacá la clase .square al <div>.
+
+    // etiq_div.classList.remove('square')
+
+    // 6. Hacé una Función que cada un segundo (setInterval()) se fije si tiene la
+    // clase .square. Si la tiene, que se la quite; si no la tiene, que se la agregue.
+    // PISTA: Si lo hiciste con un if y un else no está mal… pero probá usando
+    // classList.toggle(). Mucho más simple, ¿no?
+
+    setInterval(function () {
+      etiq_div.classList.toggle('square')
+    }, 1000);
+
   </script>
 </body>
 
