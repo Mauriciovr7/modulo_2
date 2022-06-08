@@ -28,7 +28,10 @@
 
     for (let i of pelis) {
       i.loHasVisto ? ver = 'Viste ' : ver = 'No viste '
-      console.log(ver + i.titulo + ' - ' + i.raiting + ' estrellas')
+      // console.log(ver + i.titulo + ' - ' + i.raiting + ' estrellas')
+      
+      // interpolado
+      console.log(`${ver}  ${i.titulo}   -   ${i.raiting}  estrellas`)
     }
 
     // Ejercicio asincrónico 03

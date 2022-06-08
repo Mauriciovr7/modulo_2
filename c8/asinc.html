@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>asincrono</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+  .boton {
+    background: green;
+  }
+</style>
+
+<body>
+  <div>
+    <div class="mb-3">
+      <label for="color" class="form-label">ingrese un color</label>
+      <input type="text" class="form-control" id="color">
+    </div>
+    <button type="submit" class="btn btn-primary">Enter</button>
+  </div>
+  <script>
+    // - Ejercicio asincrónico 02
+
+    /*
+    1. Creá un input en tu HTML.
+2. Cuando el usuario ingrese un color en el input (por ejemplo, "red") y haga
+enter, el color de fondo deberá tomar ese color.
+3. Si el usuario presiona la tecla para borrar, el color deberá ser blanco otra vez.
+    */
+
+    
+    const color = document.querySelector("#color")
+    const body = document.querySelector("body")
+    color.addEventListener("keyup", function (ev) {
+      console.log(ev)
+      if (ev.keyCode == 13) {  // si usuario ingresa Enter
+        // Genero el color
+        // this.style['background'] = color.value
+        body.style['background'] = color.value
+      } else if (ev.keyCode == 8) {  // si usuario ingresa borrar
+        // this.style['background'] = 'white'
+        body.style['background'] = 'white'
+      }
+    })
+
+    /*
+    Extra credit
+Ahora, adapta tu código para que el usuario escriba en el input el color de fondo en
+español. Limita tu código a colores primarios.
+Desafío: Evitá usar if...else o switch... ¿Cómo lo harías?
+    */
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+    }
+
+    .magia {
+      background-image: url(./draco.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="profesores">
+    <li>Matias</li>
+    <li>Rodrigo</li>
+    <li>Denis</li>
+    <li>Flor</li>
+  </ul>
+
+  <div id="magia" class="magia"></div>
+  <div class="magia"></div>
+  <div class="magia"></div>
+
+  <script>
+
+    let profes = document.querySelectorAll(".profesores >li") // hijos directos , .profesores >li todos los desendientes
+    // for (let i = 0; i < profes.length; i++) {
+    //   profes[i].addEventListener("click", function () {
+    //     this.style.color = "red"
+    //     this.style.background = "yellow"
+    //   })
+    // }
+
+    // for (let profe of profes) {
+    //   profe.addEventListener("click", function () {
+    //     profe.style['background'] = 'burlywood'
+    //   })
+    // }
+
+    // for (let profe of profes) {
+    //   profe.addEventListener("click", function () {
+
+    //     for (prof of profes) {
+    //       prof.style['background'] = 'white' // volver a poner en blanco
+    //     }
+
+    //     this.style['background'] = 'burlywood' // pintar fondo al clickear
+    //     console.log(this)
+    //   })
+    // }
+
+    function handlerProfes(ev) { // handler manejador
+      this.style['background'] = 'burlywood'
+      console.log(this)
+      console.log(ev)
+    }
+    for (let profe of profes) {
+      profe.addEventListener("click", handlerProfes)
+    }
+
+    // Ejercicio en clase 01
+
+    /*
+    El <div> mágico. Poné una imagen en tu página que desaparezca cuando pases el
+    mouse por arriba de un <div> secreto llamado #magia.
+    */
+    const magia = document.querySelector("#magia")
+    magia.addEventListener("mouseover", function () {
+      magia.classList.remove('magia')
+    })
+    magia.addEventListener("mouseout", function () {
+      magia.classList.add('magia')
+    })
+
+    let magias = document.querySelectorAll(".magia")
+
+    for (let j = 0; j < magias.length; j++) {
+      magias[j].addEventListener("mouseover", function () {
+        this.classList.remove('magia')
+      })
+    }
+
+    for (let k = 0; k < magias.length; k++) {
+      magias[k].addEventListener("mouseout", function () {
+        this.classList.add('magia')
+      })
+    }
+  </script>
+</body>
+
+</html>
